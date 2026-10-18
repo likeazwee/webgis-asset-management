@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_560550f09cecdbd0bb76aa1cb385730a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_560550f09cecdbd0bb76aa1cb385730a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_560550f09cecdbd0bb76aa1cb385730a = L.map(
+                "map_560550f09cecdbd0bb76aa1cb385730a",
+                {
+                    center: [-4.322329999999999, 103.25083],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b7c39007586d13180df4d210c62f693 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China, TomTom",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1b7c39007586d13180df4d210c62f693.addTo(map_560550f09cecdbd0bb76aa1cb385730a);
+        
+    
+            var marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_db0e272a96a928d23334c15fe785915a = L.marker(
+                [-4.321, 103.25],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_f0e6efac94736c6c75482ee81a540c2e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fff57b6cff23e470ac84c369151aaaf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d3c5b9309967b8343594a2695a78d4f = $(`<div id="html_3d3c5b9309967b8343594a2695a78d4f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Pohon Mahoni Taman Kota</b></h4>         <b>ID Aset:</b> AST-001<br>         <b>Kategori:</b> Pohon<br>         <b>Kondisi:</b> <span style="color:red; font-weight:bold;">Rawat Segera</span><br>         <b>Koordinat:</b> -4.3210, 103.2500     </div>     </div>`)[0];
+                popup_5fff57b6cff23e470ac84c369151aaaf.setContent(html_3d3c5b9309967b8343594a2695a78d4f);
+            
+        
+
+        marker_db0e272a96a928d23334c15fe785915a.bindPopup(popup_5fff57b6cff23e470ac84c369151aaaf)
+        ;
+
+        
+    
+    
+            marker_db0e272a96a928d23334c15fe785915a.bindTooltip(
+                `<div>
+                     Pohon Mahoni Taman Kota (Rawat Segera)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db0e272a96a928d23334c15fe785915a.setIcon(icon_f0e6efac94736c6c75482ee81a540c2e);
+            
+    
+            var marker_2ad00d3de419596f6bfbe9c19160b770 = L.marker(
+                [-4.3225, 103.252],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_be5bfb65dd545c1ea314b5bc254d4b78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f838415688067158fb90d6519a61055 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6e8af8d4a2d17fc995f44f7ce3e6cc09 = $(`<div id="html_6e8af8d4a2d17fc995f44f7ce3e6cc09" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Pohon Trembesi Alun-alun</b></h4>         <b>ID Aset:</b> AST-002<br>         <b>Kategori:</b> Pohon<br>         <b>Kondisi:</b> <span style="color:green; font-weight:bold;">Baik</span><br>         <b>Koordinat:</b> -4.3225, 103.2520     </div>     </div>`)[0];
+                popup_8f838415688067158fb90d6519a61055.setContent(html_6e8af8d4a2d17fc995f44f7ce3e6cc09);
+            
+        
+
+        marker_2ad00d3de419596f6bfbe9c19160b770.bindPopup(popup_8f838415688067158fb90d6519a61055)
+        ;
+
+        
+    
+    
+            marker_2ad00d3de419596f6bfbe9c19160b770.bindTooltip(
+                `<div>
+                     Pohon Trembesi Alun-alun (Baik)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2ad00d3de419596f6bfbe9c19160b770.setIcon(icon_be5bfb65dd545c1ea314b5bc254d4b78);
+            
+    
+            var marker_e5cf8e642749b112d8a41491b1e86f2c = L.marker(
+                [-4.3205, 103.2485],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_5142be632078367e46ea75417a92f720 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18ce8a3d46f21b90ea93bac53e5935db = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b94737f61a8c1699e9333b929e0fdb86 = $(`<div id="html_b94737f61a8c1699e9333b929e0fdb86" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Pohon Angsana Jl. Merdeka</b></h4>         <b>ID Aset:</b> AST-003<br>         <b>Kategori:</b> Pohon<br>         <b>Kondisi:</b> <span style="color:orange; font-weight:bold;">Perlu Pemangkasan</span><br>         <b>Koordinat:</b> -4.3205, 103.2485     </div>     </div>`)[0];
+                popup_18ce8a3d46f21b90ea93bac53e5935db.setContent(html_b94737f61a8c1699e9333b929e0fdb86);
+            
+        
+
+        marker_e5cf8e642749b112d8a41491b1e86f2c.bindPopup(popup_18ce8a3d46f21b90ea93bac53e5935db)
+        ;
+
+        
+    
+    
+            marker_e5cf8e642749b112d8a41491b1e86f2c.bindTooltip(
+                `<div>
+                     Pohon Angsana Jl. Merdeka (Perlu Pemangkasan)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5cf8e642749b112d8a41491b1e86f2c.setIcon(icon_5142be632078367e46ea75417a92f720);
+            
+    
+            var marker_f7e53d8dfcd13c50218ba918e478875b = L.marker(
+                [-4.324, 103.251],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_366927145757d3dae1afd9447ff4cce6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d76dc7e8ee3617d1f5f6dba02118733 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7bd070735a4fce50bf15ab4f5acb1dac = $(`<div id="html_7bd070735a4fce50bf15ab4f5acb1dac" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Lampu Jalan Sub-01</b></h4>         <b>ID Aset:</b> AST-004<br>         <b>Kategori:</b> Penerangan<br>         <b>Kondisi:</b> <span style="color:darkred; font-weight:bold;">Rusak</span><br>         <b>Koordinat:</b> -4.3240, 103.2510     </div>     </div>`)[0];
+                popup_9d76dc7e8ee3617d1f5f6dba02118733.setContent(html_7bd070735a4fce50bf15ab4f5acb1dac);
+            
+        
+
+        marker_f7e53d8dfcd13c50218ba918e478875b.bindPopup(popup_9d76dc7e8ee3617d1f5f6dba02118733)
+        ;
+
+        
+    
+    
+            marker_f7e53d8dfcd13c50218ba918e478875b.bindTooltip(
+                `<div>
+                     Lampu Jalan Sub-01 (Rusak)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7e53d8dfcd13c50218ba918e478875b.setIcon(icon_366927145757d3dae1afd9447ff4cce6);
+            
+    
+            var marker_6d7794fe6aedf55ce455d64c74a4dcbb = L.marker(
+                [-4.319, 103.253],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_9835fc5420c0ae35678bebea43c5dccf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9428ac0836c60d8d442f7612a186a421 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f81477cead987e5c6c222287b344ec9c = $(`<div id="html_f81477cead987e5c6c222287b344ec9c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Pohon Beringin Hutan Kota</b></h4>         <b>ID Aset:</b> AST-005<br>         <b>Kategori:</b> Pohon<br>         <b>Kondisi:</b> <span style="color:green; font-weight:bold;">Baik</span><br>         <b>Koordinat:</b> -4.3190, 103.2530     </div>     </div>`)[0];
+                popup_9428ac0836c60d8d442f7612a186a421.setContent(html_f81477cead987e5c6c222287b344ec9c);
+            
+        
+
+        marker_6d7794fe6aedf55ce455d64c74a4dcbb.bindPopup(popup_9428ac0836c60d8d442f7612a186a421)
+        ;
+
+        
+    
+    
+            marker_6d7794fe6aedf55ce455d64c74a4dcbb.bindTooltip(
+                `<div>
+                     Pohon Beringin Hutan Kota (Baik)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d7794fe6aedf55ce455d64c74a4dcbb.setIcon(icon_9835fc5420c0ae35678bebea43c5dccf);
+            
+    
+            var marker_bd0ed330876d1b20528c661342bac56b = L.marker(
+                [-4.3218, 103.249],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_9709b4053a1c277d0a8c59b5d795f686 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_856596ee1ef572e90c82aacf9db17c81 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3fa9b3ebe1e859391cf03686defb0e3 = $(`<div id="html_b3fa9b3ebe1e859391cf03686defb0e3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Lampu Taman Sektor A</b></h4>         <b>ID Aset:</b> AST-006<br>         <b>Kategori:</b> Penerangan<br>         <b>Kondisi:</b> <span style="color:green; font-weight:bold;">Baik</span><br>         <b>Koordinat:</b> -4.3218, 103.2490     </div>     </div>`)[0];
+                popup_856596ee1ef572e90c82aacf9db17c81.setContent(html_b3fa9b3ebe1e859391cf03686defb0e3);
+            
+        
+
+        marker_bd0ed330876d1b20528c661342bac56b.bindPopup(popup_856596ee1ef572e90c82aacf9db17c81)
+        ;
+
+        
+    
+    
+            marker_bd0ed330876d1b20528c661342bac56b.bindTooltip(
+                `<div>
+                     Lampu Taman Sektor A (Baik)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd0ed330876d1b20528c661342bac56b.setIcon(icon_9709b4053a1c277d0a8c59b5d795f686);
+            
+    
+            var marker_173540a7d0db5a7c01de3d3c56231bcd = L.marker(
+                [-4.325, 103.254],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_4368003dc3ce2e97ff42de058b565699 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3383bf8fe56e8e49fff87a72c7cbade = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d6594f5ad1968a97f90025e2b4c7093 = $(`<div id="html_3d6594f5ad1968a97f90025e2b4c7093" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Pohon Palem Pagar Alam</b></h4>         <b>ID Aset:</b> AST-007<br>         <b>Kategori:</b> Pohon<br>         <b>Kondisi:</b> <span style="color:red; font-weight:bold;">Rawat Segera</span><br>         <b>Koordinat:</b> -4.3250, 103.2540     </div>     </div>`)[0];
+                popup_e3383bf8fe56e8e49fff87a72c7cbade.setContent(html_3d6594f5ad1968a97f90025e2b4c7093);
+            
+        
+
+        marker_173540a7d0db5a7c01de3d3c56231bcd.bindPopup(popup_e3383bf8fe56e8e49fff87a72c7cbade)
+        ;
+
+        
+    
+    
+            marker_173540a7d0db5a7c01de3d3c56231bcd.bindTooltip(
+                `<div>
+                     Pohon Palem Pagar Alam (Rawat Segera)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_173540a7d0db5a7c01de3d3c56231bcd.setIcon(icon_4368003dc3ce2e97ff42de058b565699);
+            
+    
+            var marker_fdb9ceeeb8ab8afa581212e6e63dbddf = L.marker(
+                [-4.3233, 103.2505],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_1d32229ff4bb9e511d605147f4fed4b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f79dcda59c293750a13cfaa51897b73b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b7f1eac37baf6482291adb3c0a909c9 = $(`<div id="html_0b7f1eac37baf6482291adb3c0a909c9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Lampu Jalan Sub-02</b></h4>         <b>ID Aset:</b> AST-008<br>         <b>Kategori:</b> Penerangan<br>         <b>Kondisi:</b> <span style="color:green; font-weight:bold;">Baik</span><br>         <b>Koordinat:</b> -4.3233, 103.2505     </div>     </div>`)[0];
+                popup_f79dcda59c293750a13cfaa51897b73b.setContent(html_0b7f1eac37baf6482291adb3c0a909c9);
+            
+        
+
+        marker_fdb9ceeeb8ab8afa581212e6e63dbddf.bindPopup(popup_f79dcda59c293750a13cfaa51897b73b)
+        ;
+
+        
+    
+    
+            marker_fdb9ceeeb8ab8afa581212e6e63dbddf.bindTooltip(
+                `<div>
+                     Lampu Jalan Sub-02 (Baik)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdb9ceeeb8ab8afa581212e6e63dbddf.setIcon(icon_1d32229ff4bb9e511d605147f4fed4b7);
+            
+    
+            var marker_3802e7c4a7b180b5d4c10dc5c1bebe43 = L.marker(
+                [-4.3201, 103.2478],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_dd8cac82d3e6aaf41bf109bb0435b08c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9287f0d6d1c26662e932b0772a2ed297 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_863c5b04511db5e6f77f91c0ac2c92fd = $(`<div id="html_863c5b04511db5e6f77f91c0ac2c92fd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Pohon Akasia Jl. Sudirman</b></h4>         <b>ID Aset:</b> AST-009<br>         <b>Kategori:</b> Pohon<br>         <b>Kondisi:</b> <span style="color:orange; font-weight:bold;">Perlu Pemangkasan</span><br>         <b>Koordinat:</b> -4.3201, 103.2478     </div>     </div>`)[0];
+                popup_9287f0d6d1c26662e932b0772a2ed297.setContent(html_863c5b04511db5e6f77f91c0ac2c92fd);
+            
+        
+
+        marker_3802e7c4a7b180b5d4c10dc5c1bebe43.bindPopup(popup_9287f0d6d1c26662e932b0772a2ed297)
+        ;
+
+        
+    
+    
+            marker_3802e7c4a7b180b5d4c10dc5c1bebe43.bindTooltip(
+                `<div>
+                     Pohon Akasia Jl. Sudirman (Perlu Pemangkasan)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3802e7c4a7b180b5d4c10dc5c1bebe43.setIcon(icon_dd8cac82d3e6aaf41bf109bb0435b08c);
+            
+    
+            var marker_19228cb2379900bdb66cb2094b75e8d9 = L.marker(
+                [-4.3261, 103.2525],
+                {
+}
+            ).addTo(marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4);
+        
+    
+            var icon_87d24b62ac9b10050e116d0ccdae2445 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27129f96c863245f8861068a8e527e3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2834c54945687e19263b5b3f34328439 = $(`<div id="html_2834c54945687e19263b5b3f34328439" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4><b>Lampu Taman Sektor B</b></h4>         <b>ID Aset:</b> AST-010<br>         <b>Kategori:</b> Penerangan<br>         <b>Kondisi:</b> <span style="color:darkred; font-weight:bold;">Rusak</span><br>         <b>Koordinat:</b> -4.3261, 103.2525     </div>     </div>`)[0];
+                popup_27129f96c863245f8861068a8e527e3f.setContent(html_2834c54945687e19263b5b3f34328439);
+            
+        
+
+        marker_19228cb2379900bdb66cb2094b75e8d9.bindPopup(popup_27129f96c863245f8861068a8e527e3f)
+        ;
+
+        
+    
+    
+            marker_19228cb2379900bdb66cb2094b75e8d9.bindTooltip(
+                `<div>
+                     Lampu Taman Sektor B (Rusak)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_19228cb2379900bdb66cb2094b75e8d9.setIcon(icon_87d24b62ac9b10050e116d0ccdae2445);
+            
+    
+            marker_cluster_f6f6d801b154a07254093c1ab9ff0cb4.addTo(map_560550f09cecdbd0bb76aa1cb385730a);
+        
+</script>
+</html>
